@@ -13,9 +13,24 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
     <title>Hello, world!</title>
+
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        border-radius: 70%;
+        overflow: hidden;
+      }
+
+      .profile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%">
         <div class="container-fluid" style="justify-content: space-between; flex-wrap: nowrap; min-width: 1000px">
             <a class="navbar-brand" href="#"><img style="width: 100px"
                 src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png">
@@ -31,6 +46,43 @@
             </div>
         </div>
     </nav>
+
+    <div style="display: flex; flex-direction: row; text-align: center; justify-content: center; padding-top: 60px; background: #fafafa">
+      <div style="width: 500px; min-width: 500px; height: 1000px; margin-right: 300px;">
+        <div style="border: solid 1px gray; background-color: white">
+          <div style="display: flex; flex-direction: row; align-items: center; margin: 0 20px">
+          <div class="box" style="width: 60px; height: 60px">
+              <img class="profile"  src="data:image/png;base64,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">
+          </div>
+            <div>
+              plily93
+            </div>
+          </div>
+
+          <div> <img style="width: 100%" src="https://t1.daumcdn.net/cfile/tistory/2603974E55B8D15427"></div>
+          <div style="margin: 0 20px; display: flex; flex-direction: row; justify-content: space-between;">
+            <div>
+              <span class="material-icons">favorite_border</span>
+              <span class="material-icons-outlined">mode_comment</span>
+              <span class="material-icons-outlined">send</span>
+            </div>
+            <div>
+              <span class="material-icons">bookmark_border</span>
+            </div>
+          </div>
+          <div style="margin: 0 20px; text-align: left; font-size: 13px"> 춘식이 <b>외 19명</b>이 좋아합니다. </div>
+          <div style="margin: 0 20px; text-align: left; font-size: 15px"> <b>plily93</b> 요즘에 해외여행을 못가니 제주도 많이 갑니다. </div>
+          <div style="margin: 0 20px; text-align: left; font-size: 14px"> <b>widkjr32</b> 나도 제주도 가고 싶다 </div>
+          <div style="margin: 0 20px; text-align: left; font-size: 14px"> <b>__difuiwehui</b> 너무 예쁘다 </div>
+          
+          <div style="border-top: 1px gray"><input type="text" class="form-control" style="box-shadow: none; border: none" placeholder="댓글 달기.."></div>
+        </div>
+      </div>
+      <div style="width: 400px; height: 1000px; background: orange; position: fixed; left: 62%">
+        오른쪽
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
